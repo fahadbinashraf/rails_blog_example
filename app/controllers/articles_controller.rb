@@ -17,7 +17,8 @@ class ArticlesController < ApplicationController
         if @article.save
             redirect_to @article
         else
-            render 'new'
+            # the render method is used so that the article object is passed to the new template
+            render 'new' 
         end
     end
     
